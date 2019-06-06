@@ -43,15 +43,34 @@ public class MainActivity extends AppCompatActivity {
                 Log.d(tag, editText_password.toString());
 
                // Toast.makeText(getApplicationContext(),"thank you",Toast.LENGTH_SHORT).show();
-                Snackbar snackbar =Snackbar.make(layout,"clear",Snackbar.LENGTH_LONG).setAction("Cleared", new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                       finish();
-                    }
-                });
+
+
+
+                Snackbar snackbar = Snackbar.make(layout, "clear All", Snackbar.LENGTH_LONG)
+                        .setAction("To clear", new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                Snackbar snackbar1 = Snackbar.make(layout, "Message is cleared!", Snackbar.LENGTH_SHORT);
+                                snackbar1.show();
+                            }
+                        });
+
+                snackbar.show();
+
             }
         });
-
+    button_exitTop.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            finish();
+        }
+    });
+        button_exitDown.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
 
     }
 
