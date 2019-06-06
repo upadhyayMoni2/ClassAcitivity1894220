@@ -42,16 +42,16 @@ public class MainActivity extends AppCompatActivity {
                 Log.d(tag,editText_email.toString());
                 Log.d(tag, editText_password.toString());
 
-               // Toast.makeText(getApplicationContext(),"thank you",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(),"thank you",Toast.LENGTH_SHORT).show();
 
-
-
-                Snackbar snackbar = Snackbar.make(layout, "clear All", Snackbar.LENGTH_LONG)
+                 Snackbar snackbar = Snackbar.make(layout, "Thank you", Snackbar.LENGTH_LONG)
                         .setAction("To clear", new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
-                                Snackbar snackbar1 = Snackbar.make(layout, "Message is cleared!", Snackbar.LENGTH_SHORT);
-                                snackbar1.show();
+
+                                editText_name.setText("");
+                                editText_email.setText("");
+                                editText_password.setText("");
                             }
                         });
 
